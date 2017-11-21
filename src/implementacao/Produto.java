@@ -4,7 +4,6 @@ public abstract class Produto {
 
 	private String nome;
 	private double preco;
-	private boolean digital;
 	
 	public abstract void adicionaPropriedades(CarrinhoCompras carrinho);
 
@@ -22,14 +21,6 @@ public abstract class Produto {
 
 	public void setPreco(double preco) {
 		this.preco = preco;
-	}
-
-	public boolean isDigital() {
-		return this.digital;
-	}
-
-	public void setDigital(boolean digital) {
-		this.digital = digital;
 	}
 
 }
