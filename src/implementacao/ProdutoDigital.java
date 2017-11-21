@@ -18,7 +18,8 @@ public class ProdutoDigital extends Produto{
 
 	@Override
 	public void adicionaPropriedades(CarrinhoCompras carrinho) {
-		
+		carrinho.adicionaPropriedade("PRECO", getPreco());
+		carrinho.adicionaPropriedade("DOWNLOAD", getTamanhoDownload());
 	}
 	
 	
