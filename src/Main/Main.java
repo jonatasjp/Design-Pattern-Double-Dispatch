@@ -1,7 +1,5 @@
 package Main;
 
-import java.util.Arrays;
-
 import implementacao.CarrinhoCompras;
 import implementacao.ProdutoDigital;
 import implementacao.ProdutoNaoDigital;
