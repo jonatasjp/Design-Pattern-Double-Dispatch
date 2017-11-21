@@ -3,11 +3,13 @@ package implementacao;
 public class ProdutoDigital extends Produto{
 	
 	private double tamanhoDownload;
-	
-	public ProdutoDigital() {
-		setDigital(true);
-	}
 
+	@Override
+	public void adicionaPropriedades(CarrinhoCompras carrinho) {
+		carrinho.adicionaPropriedade("PRECO", getPreco());
+		carrinho.adicionaPropriedade("DOWNLOAD", getTamanhoDownload());
+	}
+	
 	public double getTamanhoDownload() {
 		return tamanhoDownload;
 	}
@@ -16,11 +18,4 @@ public class ProdutoDigital extends Produto{
 		this.tamanhoDownload = tamanhoDownload;
 	}
 
-	@Override
-	public void adicionaPropriedades(CarrinhoCompras carrinho) {
-		carrinho.adicionaPropriedade("PRECO", getPreco());
-		carrinho.adicionaPropriedade("DOWNLOAD", getTamanhoDownload());
-	}
-	
-	
 }

@@ -4,8 +4,10 @@ public class ProdutoNaoDigital extends Produto{
 	
 	private double peso;
 
-	public ProdutoNaoDigital() {
-		setDigital(false);
+	@Override
+	public void adicionaPropriedades(CarrinhoCompras carrinho) {
+		carrinho.adicionaPropriedade("PRECO", getPreco());
+		carrinho.adicionaPropriedade("PESO", getPeso());
 	}
 	
 	public double getPeso() {
@@ -16,11 +18,4 @@ public class ProdutoNaoDigital extends Produto{
 		this.peso = peso;
 	}
 
-	@Override
-	public void adicionaPropriedades(CarrinhoCompras carrinho) {
-		carrinho.adicionaPropriedade("PRECO", getPreco());
-		carrinho.adicionaPropriedade("PESO", getPeso());
-	}
-
-	
 }
